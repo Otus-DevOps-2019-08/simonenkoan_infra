@@ -36,4 +36,4 @@ $ ssh 10.156.0.4
 # VPN
 Для сервера на VPC настроено правило для Firewall , разрешаюшее входящий трафик 11498/udp
 Файл setupvpn.sh описывает установку VPN-сервера, устанавливает mongod и pritunl
-Файл cloud-bastion.ovpn - конф файл для настройки OpenVPN клиента
+Файл cloud-bastion.ovpn -  конф файл для настройки OpenVPN клиента
