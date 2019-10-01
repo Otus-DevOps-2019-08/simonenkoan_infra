@@ -17,8 +17,8 @@ $ ssh-add ~/.ssh/id_ed25519
 $ ssh -i ~/.ssh/id_ed25519 -A sansim@34.89.137.173
 $ ssh 10.156.0.4
 
-Чтобы подключиться одной строкой к someinternalhost:
-$ ssh -i ~/.ssh/id_ed25519 -A sansim@34.89.223.37 -tt ssh 10.156.0.4
+  Чтобы подключиться одной строкой к someinternalhost:  
+  $ ssh -i ~/.ssh/id_ed25519 -A sansim@34.89.223.37 -tt ssh 10.156.0.4  
 
 Чтобы подключиться к someinternalhost через команду - ssh someinternalhost - добавлены .ssh/config:
 
