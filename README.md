@@ -4,7 +4,7 @@ simonenkoan Infra repository
 ## HW3. GCP: Bastion Host, Pritunl VPN.
 
 ### Bastion-host
-  bastion_IP = 34.89.137.173 
+  bastion_IP = 34.89.137.173  
   someinternalhost_IP = 10.156.0.4
 
 ### SSH Forwarding:
