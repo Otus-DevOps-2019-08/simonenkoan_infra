@@ -21,16 +21,16 @@ $ ssh -i ~/.ssh/id_ed25519 -A sansim@34.89.223.37 -tt ssh 10.156.0.4
 
 Чтобы подключиться к someinternalhost через команду - ssh someinternalhost - добавлены .ssh/config:
 
-...Host bastion
-  ...Hostname 34.89.137.173
-  ...User sansim
-  ...IdentityFile ~/.ssh/id_ed25519
+⋅⋅⋅Host bastion
+⋅⋅⋅Hostname 34.89.137.173
+⋅⋅⋅User sansim
+⋅⋅⋅IdentityFile ~/.ssh/id_ed25519
 
-Host someinternalhost
-  Hostname 10.156.0.4
-  User sansim
-  ProxyCommand ssh -W %h:%p bastion
-  IdentityFile ~/.ssh/id_ed25519
+⋅⋅⋅Host someinternalhost
+⋅⋅⋅Hostname 10.156.0.4
+⋅⋅⋅User sansim
+⋅⋅⋅ProxyCommand ssh -W %h:%p bastion
+⋅⋅⋅IdentityFile ~/.ssh/id_ed25519
 
 # VPN
 Для сервера на VPC настроено правило для Firewall , разрешаюшее входящий трафик 11498/udp
