@@ -33,12 +33,12 @@ $ ssh 10.156.0.4
   ProxyCommand ssh -W %h:%p bastion  
   IdentityFile ~/.ssh/id_ed25519
 
-# VPN
+### VPN
 Для сервера на VPC настроено правило для Firewall , разрешаюшее входящий трафик 11498/udp
 Файл setupvpn.sh описывает установку VPN-сервера, устанавливает mongod и pritunl
 Файл cloud-bastion.ovpn -  конф файл для настройки OpenVPN клиента
 
-## HW3. GCP testapp
+## HW4. GCP testapp
 ###Установка Google Cloud SDK и создание нового инстанса reddit-app
 
 gcloud compute instances create reddit-app --boot-disk-size=10GB --image-family ubuntu-1604-lts --image-project=ubuntu-os-cloud --machine-type=g1-small --tags puma-server --restart-on-failure
