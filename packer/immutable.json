@@ -1,0 +1,37 @@
+{
+   "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "{{user `project_id`}}",
+            "image_name": "reddit-full-{{timestamp}}",
+            "image_family": "reddit-full",
+            "source_image_family": "{{user `source_image_family`}}",
+            "zone": "europe-west1-b",
+            "ssh_username": "appuser",
+            "machine_type": "{{user `machine_type`}}",
+            "image_description": "{{user `image_description`}}",
+            "disk_type": "{{user `disk_type`}}",
+            "disk_size": "{{user `disk_size`}}",
+            "tags": "{{user `tags`}}"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "files/puma_deploy.sh",
+            "execute_command": "sudo {{.Path}}",
+            "pause_before": "10s"
+        },
+        {
+            "type": "shell",
+            "script": "files/systemd_deploy.sh",
+            "execute_command": "sudo {{.Path}}",
+            "pause_before": "10s"
+        },
+        {
+            "type": "shell",
+            "inline": ["systemctl enable systemdunit.service"],
+            "execute_command": "sudo {{.Path}}"
+        }
+    ]
+}
