@@ -8,9 +8,9 @@ provider "google" {
   version = "2.15"
 
   # ID проекта
-  project = var.project
+  project = "infra-253420"
 
-  region = var.region
+  region = "europe-west1"
 }
 
 resource "google_compute_instance" "app" {
@@ -33,8 +33,7 @@ resource "google_compute_instance" "app" {
     user  = "sansim"
     agent = false
     # путь до приватного ключа
-    #  private_key = file("/root/.ssh/id_ed25519")
-    private_key = file(var.public_key_path)
+    private_key = file("/root/.ssh/id_ed25519")
   }
   provisioner "file" {
     source      = "files/puma.service"
@@ -53,12 +52,10 @@ resource "google_compute_firewall" "firewall_puma" {
   # Какой доступ разрешить
   allow {
     protocol = "tcp"
-    ports    = ["9292"]
+    ports = ["9292"]
   }
   # Каким адресам разрешаем доступ
   source_ranges = ["0.0.0.0/0"]
   # Правило применимо для инстансов с перечисленными тэгами
   target_tags = ["reddit-app"]
 }
-
-
