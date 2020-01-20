@@ -2,7 +2,9 @@
 simonenkoan Infra repository
 [Some text](#markdown-header-my-paragraph-title)
 
-### <a name="pookie"></a>Some heading
+Link to [header1](#header1)
+
+
 ## HW4 GCP testapp
 Установка Google Cloud SDK и создание нового инстанса reddit-app
 
@@ -49,7 +51,7 @@ ps aux | grep puma 9292
 Создаем исполняемые скрипты для запуска команд выше (*.sh) Копируем на наш инстанс все необходимые файлы scp install_ruby.sh appuser@reddit-app:/home/appuser/
 
 Создание инстансов и установка необходимого ПО
-
+<a name="header1"></a>Some text
 gcloud compute instances create reddit-app
 --boot-disk-size=10GB
 --image-family ubuntu-1604-lts
