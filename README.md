@@ -1,6 +1,6 @@
 # simonenkoan_infra
 simonenkoan Infra repository
-[Some text](#markdown-header-my-paragraph-title)
+[Some text](# markdown-header-my-paragraph-title)
 ## HW4 GCP testapp
 Установка Google Cloud SDK и создание нового инстанса reddit-app
 
@@ -65,5 +65,4 @@ gcloud compute firewall-rules create default-puma-server
 --source-ranges="0.0.0.0/0"
 --target-tags=puma-server \
 
-#markdown-header-my-paragraph-title
-sffsd
+# markdown-header-my-paragraph-title
