@@ -35,7 +35,7 @@ sudo systemctl enable mongod
 Файл setupvpn.sh описывает установку VPN-сервера, устанавливает mongod и pritunl
 Файл cloud-bastion.ovpn -  конф файл для настройки OpenVPN клиента
 
-## HW4. GCP testapp
+# HW Основные сервисы Google Cloud Platform (GCP). 
 ###Установка Google Cloud SDK и создание нового инстанса reddit-app
 
 gcloud compute instances create reddit-app --boot-disk-size=10GB --image-family ubuntu-1604-lts --image-project=ubuntu-os-cloud --machine-type=g1-small --tags puma-server --restart-on-failure
@@ -110,7 +110,7 @@ gcloud compute firewall-rules create default-puma-server
 --source-ranges="0.0.0.0/0"
 --target-tags=puma-server \
 
-## HW5.  "Модели управления инфраструктурой."
+# HW7  "Модели управления инфраструктурой."
 Ветка packer-base содержит реализацию тестового задания к уроку "Модели управления инфраструктурой."
 
 - Установлен packer и go
@@ -120,3 +120,16 @@ gcloud compute firewall-rules create default-puma-server
 - C помощью packer-образа создана ВМ и развернуто приложение
 - Добавлен файл с примерами использования других переменных
 - В  gitignore добавлен variables.json
+
+# HW8 Практика Infrastructure as a Code (IaC). 
+
+### Домашнее задание terraform-1
+- Создана ветка terraform-1 (git branch terrafom-1)
+- Создан файл конфигурации terraform main.tf
+- В main.tf добавлен путь до приватного ключа для пользователя
+- Добавлены правила фаервола и теги
+- Создан файл для выходных переменных outputs.tf
+- Добавлены провижинеры для деплоя последней версии приложения
+- Создана директория files. В ней юнит для puma.service и deploy.sh
+- Создан variables.tf для переменных
+- Создан terraform.tfvars для переменных
