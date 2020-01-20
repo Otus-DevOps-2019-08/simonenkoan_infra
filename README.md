@@ -20,10 +20,10 @@ testapp_port = 9292
 
 $ sudo apt update 
 $ sudo apt install -y ruby-full ruby-bundler build-essential
-###<a name="header1"></a>Some text
+
 ruby 2.3.1p112 (2016-04-26) [x86_64-linux-gnu] 
 Bundler version 1.11.2
-
+### <a name="header1"></a>Some text
 Установка MongoDB
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927 
